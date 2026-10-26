@@ -1,0 +1,17 @@
+[
+ {"id":"apartment","name":"City apartment","category":"Residential property","price":"350000","annual_change":"0.02","monthly_cost":"450","sale_hours":720,"discount":"0.03"},
+ {"id":"penthouse","name":"Central London penthouse","category":"Residential property","price":"3500000","annual_change":"0.02","monthly_cost":"3500","sale_hours":1440,"discount":"0.04"},
+ {"id":"house","name":"Family house","category":"Residential property","price":"650000","annual_change":"0.02","monthly_cost":"800","sale_hours":720,"discount":"0.03"},
+ {"id":"mansion","name":"Country mansion","category":"Residential property","price":"8500000","annual_change":"0.015","monthly_cost":"12000","sale_hours":2160,"discount":"0.08"},
+ {"id":"commercial","name":"Regional commercial building","category":"Commercial property","price":"1800000","annual_change":"0.01","monthly_cost":"4000","sale_hours":1440,"discount":"0.05"},
+ {"id":"car","name":"Everyday saloon","category":"Vehicles","price":"28000","annual_change":"-0.15","monthly_cost":"180","sale_hours":24,"discount":"0.08"},
+ {"id":"sports_car","name":"Performance sports car","category":"Vehicles","price":"115000","annual_change":"-0.12","monthly_cost":"650","sale_hours":72,"discount":"0.08"},
+ {"id":"supercar","name":"Limited-production supercar","category":"Vehicles","price":"320000","annual_change":"-0.08","monthly_cost":"1800","sale_hours":168,"discount":"0.12"},
+ {"id":"luxury_car","name":"Luxury limousine","category":"Vehicles","price":"240000","annual_change":"-0.12","monthly_cost":"1200","sale_hours":96,"discount":"0.10"},
+ {"id":"classic_car","name":"Collectible classic motor car","category":"Collectibles","price":"180000","annual_change":"0.01","monthly_cost":"450","sale_hours":336,"discount":"0.12"},
+ {"id":"watch","name":"Fine mechanical watch","category":"Watches and jewellery","price":"18000","annual_change":"0.00","monthly_cost":"35","sale_hours":72,"discount":"0.15"},
+ {"id":"jewellery","name":"Fine jewellery collection","category":"Watches and jewellery","price":"65000","annual_change":"0.005","monthly_cost":"75","sale_hours":168,"discount":"0.18"},
+ {"id":"art","name":"Contemporary art collection","category":"Art and collectibles","price":"250000","annual_change":"0.01","monthly_cost":"350","sale_hours":720,"discount":"0.20"},
+ {"id":"yacht","name":"24-metre motor yacht","category":"Yachts","price":"4200000","annual_change":"-0.07","monthly_cost":"35000","sale_hours":1440,"discount":"0.12"},
+ {"id":"aircraft","name":"Private business aircraft","category":"Aircraft","price":"18500000","annual_change":"-0.06","monthly_cost":"125000","sale_hours":2160,"discount":"0.12"}
+]

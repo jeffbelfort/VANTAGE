@@ -1,0 +1,70 @@
+name: Windows x64 release
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.10'
+          architecture: x64
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install exact Windows wheel dependencies
+        shell: python
+        run: |
+          import struct, subprocess, sys
+          subprocess.run([sys.executable, '-m', 'pip', 'install', '--only-binary=:all:', '-r', 'packaging/requirements-windows.txt'], check=True)
+          subprocess.run([sys.executable, '-m', 'pip', 'check'], check=True)
+          subprocess.run([sys.executable, '-m', 'pip', 'freeze'], check=True)
+          from PyQt6.QtCore import QT_VERSION_STR
+          from PyQt6.QtWebEngineWidgets import QWebEngineView
+          assert struct.calcsize('P') == 8 and sys.version_info[:3] == (3, 12, 10)
+          assert QT_VERSION_STR == '6.9.1', QT_VERSION_STR
+          print('Qt', QT_VERSION_STR)
+      - name: Build production frontend
+        run: |
+          npm ci
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run build
+      - name: Synthetic source regressions (no historical saves)
+        shell: python
+        run: |
+          import os, pathlib, subprocess, sys
+          folder = pathlib.Path('runtime/tmp').resolve()
+          folder.mkdir(parents=True, exist_ok=True)
+          env = dict(os.environ, TMPDIR=str(folder), QT_QPA_PLATFORM='offscreen')
+          subprocess.run([sys.executable, 'packaging/run_regressions.py'], env=env, check=True)
+      - name: Freeze Windows x64 executable and Qt runtime
+        run: python -m PyInstaller --clean --noconfirm packaging/VANTAGE.spec
+      - name: Audit, ZIP, extract and test the actual packaged executable
+        run: python packaging/verify_windows.py
+      - name: Upload verified Windows download
+        uses: actions/upload-artifact@v4
+        with:
+          name: VANTAGE-Windows-x64
+          path: |
+            windows-artifacts/VANTAGE-Windows-x64.zip
+            windows-artifacts/SHA256SUMS.txt
+            windows-artifacts/WINDOWS-VALIDATION.json
+          if-no-files-found: error
+          compression-level: 0
+      - name: Upload diagnostics when validation fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: VANTAGE-Windows-failure-diagnostics
+          path: windows-artifacts/diagnostics/
+          if-no-files-found: ignore

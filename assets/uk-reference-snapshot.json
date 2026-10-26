@@ -1,0 +1,73 @@
+{
+  "retrieved": "2026-10-23",
+  "quotes": [
+    {
+      "symbol": "STAN.L",
+      "name": "STANDARD CHARTERED PLC",
+      "exchange": "London Stock Exchange",
+      "mic": "XLON",
+      "currency": "GBP",
+      "country": "GB",
+      "quote_unit": "GBX",
+      "price": "21.1100",
+      "original_price": "2111.00",
+      "source": "London Stock Exchange",
+      "source_url": "https://www.londonstockexchange.com/stock/STAN/standard-chartered-plc/trade-recap",
+      "timestamp": "2026-10-14T15:59:51+01:00",
+      "observed_at": "2026-10-23",
+      "quality": "HISTORICAL",
+      "delay": "Archived delayed quote; at least 15 minutes at publication"
+    },
+    {
+      "symbol": "LLOY.L",
+      "name": "Lloyds Banking Group Plc",
+      "exchange": "London Stock Exchange",
+      "mic": "XLON",
+      "currency": "GBP",
+      "country": "GB",
+      "quote_unit": "GBX",
+      "price": "1.0370",
+      "original_price": "103.70",
+      "source": "London Stock Exchange",
+      "source_url": "https://www.londonstockexchange.com/stock/LLOY/lloyds-banking-group-plc/company-page?lang=en",
+      "timestamp": "2026-10-12T16:00:34+01:00",
+      "observed_at": "2026-10-23",
+      "quality": "HISTORICAL",
+      "delay": "Archived delayed quote; at least 15 minutes at publication"
+    },
+    {
+      "symbol": "HSBA.L",
+      "name": "HSBC Holdings Plc",
+      "exchange": "London Stock Exchange",
+      "mic": "XLON",
+      "currency": "GBP",
+      "country": "GB",
+      "quote_unit": "GBX",
+      "price": "15.2900",
+      "original_price": "1529.00",
+      "source": "London Stock Exchange",
+      "source_url": "https://www.londonstockexchange.com/stock/HSBA/hsbc-holdings-plc/company-page?lang=en",
+      "timestamp": "2026-09-10T22:23:58+01:00",
+      "observed_at": "2026-10-23",
+      "quality": "HISTORICAL",
+      "delay": "Archived delayed quote; at least 15 minutes at publication"
+    },
+    {
+      "symbol": "NWG.L",
+      "name": "NatWest Group plc",
+      "exchange": "London Stock Exchange",
+      "mic": "XLON",
+      "currency": "GBP",
+      "country": "GB",
+      "quote_unit": "GBX",
+      "price": "6.8240",
+      "original_price": "682.40",
+      "source": "London Stock Exchange",
+      "source_url": "https://www.londonstockexchange.com/stock/NWG/natwest-group-plc/",
+      "timestamp": "2026-09-11T02:16:52+01:00",
+      "observed_at": "2026-10-23",
+      "quality": "HISTORICAL",
+      "delay": "Archived delayed quote; at least 15 minutes at publication"
+    }
+  ]
+}

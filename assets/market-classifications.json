@@ -1,0 +1,1181 @@
+{
+  "taxonomy": "VANTAGE descriptive business lines",
+  "notes": "Existing catalogue sector/industry metadata takes priority. These browsing labels never modify simulation risk groups. Unknown classifications remain Unclassified.",
+  "records": {
+    "NVDA": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification",
+      "issuer_source": "https://investor.nvidia.com/home/default.aspx"
+    },
+    "AMD": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "INTC": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AVGO": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MU": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TSM": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ASML": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ARM": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TXN": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MRVL": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ADI": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "QCOM": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ASX": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "005930.KS": {
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AMAT": {
+      "sector": "Technology",
+      "industry": "Semiconductor Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "LRCX": {
+      "sector": "Technology",
+      "industry": "Semiconductor Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "KLAC": {
+      "sector": "Technology",
+      "industry": "Semiconductor Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MSFT": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ORCL": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PLTR": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SAP": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CRM": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NOW": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ADBE": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SNOW": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ADP": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "DDOG": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "APP": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SNPS": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CDNS": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "INTU": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ACN": {
+      "sector": "Technology",
+      "industry": "Software",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PANW": {
+      "sector": "Technology",
+      "industry": "Cybersecurity",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CRWD": {
+      "sector": "Technology",
+      "industry": "Cybersecurity",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "FTNT": {
+      "sector": "Technology",
+      "industry": "Cybersecurity",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NET": {
+      "sector": "Technology",
+      "industry": "Cybersecurity",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AAPL": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "DELL": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "IBM": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CSCO": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ANET": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "APH": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SNDK": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "STX": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "WDC": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GLW": {
+      "sector": "Technology",
+      "industry": "Hardware & Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "JPM": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification",
+      "issuer_source": "https://www.jpmorgan.com/investment-banking"
+    },
+    "BAC": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "WFC": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "C": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "HSBC": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "HSBA.L": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BARC.L": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NWG.L": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "LLOY.L": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "STAN.L": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "RY": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MUFG": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TD": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SAN": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SMFG": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BBVA": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "UBS": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "DB": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MFG": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "HDB": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BMO": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BNS": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "IBN": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ITUB": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CM": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ING": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "USB": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PNC": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "FDBC": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AVBH": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BCML": {
+      "sector": "Financial Services",
+      "industry": "Banking",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GS": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MS": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BLK": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SCHW": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BX": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "IBKR": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "HOOD": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CME": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ICE": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SPGI": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MCO": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BN": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CION": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CCAP": {
+      "sector": "Financial Services",
+      "industry": "Investment Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "V": {
+      "sector": "Financial Services",
+      "industry": "Payments & Credit",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MA": {
+      "sector": "Financial Services",
+      "industry": "Payments & Credit",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AXP": {
+      "sector": "Financial Services",
+      "industry": "Payments & Credit",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "COF": {
+      "sector": "Financial Services",
+      "industry": "Payments & Credit",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BRK-B": {
+      "sector": "Financial Services",
+      "industry": "Insurance",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CB": {
+      "sector": "Financial Services",
+      "industry": "Insurance",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PGR": {
+      "sector": "Financial Services",
+      "industry": "Insurance",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MRSH": {
+      "sector": "Financial Services",
+      "industry": "Insurance",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "LLY": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "JNJ": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ABBV": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MRK": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NVS": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AZN": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification",
+      "issuer_source": "https://www.astrazeneca.com/our-company.html/"
+    },
+    "AZN.L": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification",
+      "issuer_source": "https://www.astrazeneca.com/our-company.html/"
+    },
+    "AMGN": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GILD": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NVO": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PFE": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "VRTX": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BMY": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GSK": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SNY": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MRNA": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "REGN": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CCCC": {
+      "sector": "Healthcare",
+      "industry": "Pharmaceuticals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TMO": {
+      "sector": "Healthcare",
+      "industry": "Medical Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ABT": {
+      "sector": "Healthcare",
+      "industry": "Medical Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "DHR": {
+      "sector": "Healthcare",
+      "industry": "Medical Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ISRG": {
+      "sector": "Healthcare",
+      "industry": "Medical Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MDT": {
+      "sector": "Healthcare",
+      "industry": "Medical Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SYK": {
+      "sector": "Healthcare",
+      "industry": "Medical Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "UNH": {
+      "sector": "Healthcare",
+      "industry": "Healthcare Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CVS": {
+      "sector": "Healthcare",
+      "industry": "Healthcare Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MCK": {
+      "sector": "Healthcare",
+      "industry": "Healthcare Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "HCA": {
+      "sector": "Healthcare",
+      "industry": "Healthcare Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ELV": {
+      "sector": "Healthcare",
+      "industry": "Healthcare Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "XOM": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CVX": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SHEL": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SHEL.L": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BP": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BP.L": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TTE": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "COP": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PBR": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MPC": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "VLO": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PSX": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CNQ": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "EQNR": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ENB": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SU": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "WMB": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "E": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "RNGR": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "KNOP": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "REI": {
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "RTX": {
+      "sector": "Industrials",
+      "industry": "Aerospace & Defence",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BA": {
+      "sector": "Industrials",
+      "industry": "Aerospace & Defence",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "LMT": {
+      "sector": "Industrials",
+      "industry": "Aerospace & Defence",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GD": {
+      "sector": "Industrials",
+      "industry": "Aerospace & Defence",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "HWM": {
+      "sector": "Industrials",
+      "industry": "Aerospace & Defence",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "RR.L": {
+      "sector": "Industrials",
+      "industry": "Aerospace & Defence",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GE": {
+      "sector": "Industrials",
+      "industry": "Aerospace & Defence",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CAT": {
+      "sector": "Industrials",
+      "industry": "Industrial Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "DE": {
+      "sector": "Industrials",
+      "industry": "Industrial Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ETN": {
+      "sector": "Industrials",
+      "industry": "Industrial Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PH": {
+      "sector": "Industrials",
+      "industry": "Industrial Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TT": {
+      "sector": "Industrials",
+      "industry": "Industrial Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "EMR": {
+      "sector": "Industrials",
+      "industry": "Industrial Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "JCI": {
+      "sector": "Industrials",
+      "industry": "Industrial Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MMM": {
+      "sector": "Industrials",
+      "industry": "Industrial Equipment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GEV": {
+      "sector": "Industrials",
+      "industry": "Infrastructure & Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PWR": {
+      "sector": "Industrials",
+      "industry": "Infrastructure & Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CTAS": {
+      "sector": "Industrials",
+      "industry": "Infrastructure & Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "WM": {
+      "sector": "Industrials",
+      "industry": "Infrastructure & Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CDNL": {
+      "sector": "Industrials",
+      "industry": "Infrastructure & Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ERII": {
+      "sector": "Industrials",
+      "industry": "Infrastructure & Services",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "UNP": {
+      "sector": "Industrials",
+      "industry": "Transport & Logistics",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CSX": {
+      "sector": "Industrials",
+      "industry": "Transport & Logistics",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "UPS": {
+      "sector": "Industrials",
+      "industry": "Transport & Logistics",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SHIP": {
+      "sector": "Industrials",
+      "industry": "Transport & Logistics",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "UBER": {
+      "sector": "Industrials",
+      "industry": "Transport & Logistics",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TSLA": {
+      "sector": "Consumer Discretionary",
+      "industry": "Automotive",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TM": {
+      "sector": "Consumer Discretionary",
+      "industry": "Automotive",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AMZN": {
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "HD": {
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BABA": {
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SHOP": {
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PDD": {
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "LOW": {
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MELI": {
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TJX": {
+      "sector": "Consumer Discretionary",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MCD": {
+      "sector": "Consumer Discretionary",
+      "industry": "Travel & Leisure",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BKNG": {
+      "sector": "Consumer Discretionary",
+      "industry": "Travel & Leisure",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SBUX": {
+      "sector": "Consumer Discretionary",
+      "industry": "Travel & Leisure",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ABNB": {
+      "sector": "Consumer Discretionary",
+      "industry": "Travel & Leisure",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MAR": {
+      "sector": "Consumer Discretionary",
+      "industry": "Travel & Leisure",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "DASH": {
+      "sector": "Consumer Discretionary",
+      "industry": "Travel & Leisure",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SONY": {
+      "sector": "Consumer Discretionary",
+      "industry": "Consumer Electronics",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "WMT": {
+      "sector": "Consumer Staples",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification",
+      "issuer_source": "https://stock.walmart.com/company-information"
+    },
+    "COST": {
+      "sector": "Consumer Staples",
+      "industry": "Retail",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "KO": {
+      "sector": "Consumer Staples",
+      "industry": "Food & Beverages",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PEP": {
+      "sector": "Consumer Staples",
+      "industry": "Food & Beverages",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BUD": {
+      "sector": "Consumer Staples",
+      "industry": "Food & Beverages",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MNST": {
+      "sector": "Consumer Staples",
+      "industry": "Food & Beverages",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MDLZ": {
+      "sector": "Consumer Staples",
+      "industry": "Food & Beverages",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "LWAY": {
+      "sector": "Consumer Staples",
+      "industry": "Food & Beverages",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PG": {
+      "sector": "Consumer Staples",
+      "industry": "Household Products",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "UL": {
+      "sector": "Consumer Staples",
+      "industry": "Household Products",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ULVR.L": {
+      "sector": "Consumer Staples",
+      "industry": "Household Products",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PM": {
+      "sector": "Consumer Staples",
+      "industry": "Tobacco",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "MO": {
+      "sector": "Consumer Staples",
+      "industry": "Tobacco",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BTI": {
+      "sector": "Consumer Staples",
+      "industry": "Tobacco",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "VZ": {
+      "sector": "Communication Services",
+      "industry": "Telecommunications",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "T": {
+      "sector": "Communication Services",
+      "industry": "Telecommunications",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "TMUS": {
+      "sector": "Communication Services",
+      "industry": "Telecommunications",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GOOGL": {
+      "sector": "Communication Services",
+      "industry": "Media & Entertainment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "GOOG": {
+      "sector": "Communication Services",
+      "industry": "Media & Entertainment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "META": {
+      "sector": "Communication Services",
+      "industry": "Media & Entertainment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NFLX": {
+      "sector": "Communication Services",
+      "industry": "Media & Entertainment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "DIS": {
+      "sector": "Communication Services",
+      "industry": "Media & Entertainment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SPOT": {
+      "sector": "Communication Services",
+      "industry": "Media & Entertainment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NTES": {
+      "sector": "Communication Services",
+      "industry": "Media & Entertainment",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NEE": {
+      "sector": "Utilities",
+      "industry": "Power & Utilities",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SO": {
+      "sector": "Utilities",
+      "industry": "Power & Utilities",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "DUK": {
+      "sector": "Utilities",
+      "industry": "Power & Utilities",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "CEG": {
+      "sector": "Utilities",
+      "industry": "Power & Utilities",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "WELL": {
+      "sector": "Real Estate",
+      "industry": "Real Estate Investment Trusts",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "PLD": {
+      "sector": "Real Estate",
+      "industry": "Real Estate Investment Trusts",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "EQIX": {
+      "sector": "Real Estate",
+      "industry": "Real Estate Investment Trusts",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AMT": {
+      "sector": "Real Estate",
+      "industry": "Real Estate Investment Trusts",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "LIN": {
+      "sector": "Materials",
+      "industry": "Chemicals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SHW": {
+      "sector": "Materials",
+      "industry": "Chemicals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "ECL": {
+      "sector": "Materials",
+      "industry": "Chemicals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "BHP": {
+      "sector": "Materials",
+      "industry": "Mining & Metals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SCCO": {
+      "sector": "Materials",
+      "industry": "Mining & Metals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "RIO": {
+      "sector": "Materials",
+      "industry": "Mining & Metals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "NEM": {
+      "sector": "Materials",
+      "industry": "Mining & Metals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "FCX": {
+      "sector": "Materials",
+      "industry": "Mining & Metals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "AEM": {
+      "sector": "Materials",
+      "industry": "Mining & Metals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    },
+    "SLI": {
+      "sector": "Materials",
+      "industry": "Mining & Metals",
+      "basis": "Curated business-line taxonomy; not an official exchange classification"
+    }
+  }
+}
