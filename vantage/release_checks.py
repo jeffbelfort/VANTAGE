@@ -59,6 +59,9 @@ def engine_checks():
 def monitor_webengine(app, view, bridge):
     """Exercise the production page, its JavaScript bundle and Qt WebChannel."""
     from PyQt6.QtCore import QTimer
+    if __import__('sys').platform == 'win32':
+        from .qt_runtime import inspect_runtime
+        inspect_runtime()
     target = Path(os.environ['VANTAGE_VALIDATION_REPORT'])
     completed = False
     attempts = 0
@@ -83,7 +86,8 @@ def monitor_webengine(app, view, bridge):
             if value.get('ready'):
                 finish(bridge.engine.state is None and view.window().isVisible(),
                        onboarding=True, webchannel=value.get('bridge'), fresh_profile=bridge.engine.state is None,
-                       qt_version=__import__('PyQt6.QtCore',fromlist=['QT_VERSION_STR']).QT_VERSION_STR)
+                       qt_version=__import__('PyQt6.QtCore',fromlist=['qVersion']).qVersion(),
+                       qt_binding_build_version=__import__('PyQt6.QtCore',fromlist=['QT_VERSION_STR']).QT_VERSION_STR)
         view.page().runJavaScript("({ready:!!document.querySelector('.onboarding form') && !!window.qt && document.querySelector('.onboarding img').naturalWidth>0 && document.styleSheets.length>0, bridge:!!window.qt, text:document.body.innerText.slice(0,100)})", got_state)
     timer.timeout.connect(evaluate)
     timer.start(1000)

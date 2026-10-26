@@ -53,11 +53,8 @@ jobs:
           subprocess.run([sys.executable, '-m', 'pip', 'install', '--only-binary=:all:', '-r', 'packaging/requirements-windows.txt'], check=True)
           subprocess.run([sys.executable, '-m', 'pip', 'check'], check=True)
           subprocess.run([sys.executable, '-m', 'pip', 'freeze'], check=True)
-          from PyQt6.QtCore import QT_VERSION_STR
-          from PyQt6.QtWebEngineWidgets import QWebEngineView
           assert struct.calcsize('P') == 8 and sys.version_info[:3] == (3, 12, 10)
-          assert QT_VERSION_STR == '6.9.1', QT_VERSION_STR
-          print('Qt', QT_VERSION_STR)
+          subprocess.run([sys.executable, '-m', 'vantage.qt_runtime'], check=True)
       - name: Build production frontend
         run: |
           npm ci
