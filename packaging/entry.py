@@ -6,10 +6,10 @@ import sys
 import traceback
 
 def main():
-    from vantage.paths import prepare_release
-    prepare_release()
     report = os.environ.get('VANTAGE_VALIDATION_REPORT')
     try:
+        from vantage.paths import prepare_release
+        prepare_release()
         if '--release-self-test' in sys.argv:
             from vantage.release_checks import engine_checks
             result = engine_checks()

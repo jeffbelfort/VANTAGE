@@ -11,7 +11,9 @@ def runtime_directory():
         base = Path(os.environ.get('LOCALAPPDATA') or Path.home() / 'AppData' / 'Local')
     else:
         base = Path(os.environ.get('XDG_DATA_HOME') or Path.home() / '.local' / 'share')
-    return base / 'VANTAGE'
+    # Windows temporary/profile paths may use 8.3 aliases or junctions.
+    # Compare canonical paths in Engine without relaxing its confinement guard.
+    return (base / 'VANTAGE').resolve()
 def prepare_release():
     if RELEASE:
         os.environ.pop('QTWEBENGINE_REMOTE_DEBUGGING', None)

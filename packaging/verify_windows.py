@@ -18,6 +18,28 @@ def require(condition, message):
     if not condition:
         raise RuntimeError(message)
 
+def validate_process_result(run, report, label):
+    """Surface the windowed executable's JSON traceback without weakening exit gates."""
+    result = None
+    report_error = None
+    if report.is_file():
+        try:
+            result = json.loads(report.read_text(encoding='utf-8'))
+            if not isinstance(result, dict):
+                report_error = 'Completion report is not a JSON object'
+                result = None
+        except (ValueError, OSError) as exc:
+            report_error = f'Cannot read completion report: {exc}'
+    if run.returncode != 0:
+        details = (result or {}).get('traceback') or (result or {}).get('error') or report_error
+        if not details:
+            details = (run.stderr or run.stdout or 'No Python completion report; possible bootloader/native startup failure')[-8000:]
+        raise RuntimeError(f'{label} exited {run.returncode}:\n{details}\nReport: {report}')
+    require(report.is_file(), f'{label} produced no completion report')
+    require(result is not None, f'{label}: {report_error}')
+    require(result.get('passed') is True, f'{label} failed: {result}')
+    return result
+
 def audit(directory):
     files = [p for p in directory.rglob('*') if p.is_file()]
     names = {p.name.lower() for p in files}
@@ -87,16 +109,13 @@ def main():
         for label,flag in [('engine','--release-self-test'),('native-gui','--smoke-test'),('webengine-gui','--webengine-smoke-test')]:
             profile=folder/('fresh '+label);profile.mkdir()
             report=diagnostics/(label+'.json')
+            report.unlink(missing_ok=True)
             env={k:v for k,v in os.environ.items() if k not in {'PYTHONHOME','PYTHONPATH','QT_PLUGIN_PATH','QT_QPA_PLATFORM','QTWEBENGINE_CHROMIUM_FLAGS','QTWEBENGINE_REMOTE_DEBUGGING','VANTAGE_DATABASE','VANTAGE_LOG_DIR'}}
             env.update(LOCALAPPDATA=str(profile),XDG_DATA_HOME=str(profile),VANTAGE_VALIDATION_REPORT=str(report))
             # Test the actual Windows desktop platform (qwindows), not offscreen Chromium.
             run=subprocess.run([str(package/'VANTAGE.exe'),flag],cwd=folder,env=env,capture_output=True,text=True,timeout=120)
             (diagnostics/(label+'.txt')).write_text((run.stdout or '')+'\n'+(run.stderr or ''),encoding='utf-8')
-            require(run.returncode==0,f'{label} exited {run.returncode}; see diagnostics')
-            require(report.is_file(),f'{label} produced no completion report')
-            result=json.loads(report.read_text(encoding='utf-8'))
-            require(result.get('passed') is True,f'{label} failed: {result}')
-            results[label]=result
+            results[label]=validate_process_result(run,report,label)
         require(audit(package)==hashes,'Application modified the distributed payload during tests')
     digest=hashlib.sha256(archive.read_bytes()).hexdigest()
     (OUT/'SHA256SUMS.txt').write_text(digest+'  '+archive.name+'\n',encoding='utf-8')

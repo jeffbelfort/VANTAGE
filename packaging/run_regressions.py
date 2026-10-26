@@ -10,7 +10,7 @@ def flatten(suite):
   if isinstance(test,unittest.TestSuite):yield from flatten(test)
   elif test._testMethodName not in SKIP:yield test
 suite=unittest.TestSuite()
-for module in ('test_player_banking','test_ma','test_fund_settlement','test_qt_runtime'):
+for module in ('test_player_banking','test_ma','test_fund_settlement','test_qt_runtime','test_packaged_diagnostics','test_release_paths'):
  suite.addTests(flatten(unittest.defaultTestLoader.loadTestsFromName(module)))
 result=unittest.TextTestRunner(verbosity=2).run(suite)
 raise SystemExit(not result.wasSuccessful())
