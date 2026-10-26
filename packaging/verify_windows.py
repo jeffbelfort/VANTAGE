@@ -68,6 +68,10 @@ def audit(directory):
 
 def main():
     require(sys.platform=='win32','This validation requires a native Windows x64 runner')
+    expected=os.environ.get('VANTAGE_BUILD_PYTHON')
+    if expected:
+        require(Path(sys.executable).resolve()==Path(expected).resolve() and sys.prefix!=sys.base_prefix,
+                'Packaged validation must run from the isolated build environment')
     OUT.mkdir(exist_ok=True)
     diagnostics=OUT/'diagnostics';diagnostics.mkdir(exist_ok=True)
     hashes=audit(DIST)

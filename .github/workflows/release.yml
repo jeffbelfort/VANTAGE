@@ -11,6 +11,7 @@ jobs:
     timeout-minutes: 30
     env:
       PYTHONUTF8: '1'
+      PYTHONNOUSERSITE: '1'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,10 +23,33 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Create isolated Python build environment
+        shell: python
+        run: |
+          import os, pathlib, venv
+          environment = pathlib.Path(os.environ['RUNNER_TEMP']) / 'vantage-build-venv'
+          venv.EnvBuilder(with_pip=True, system_site_packages=False, clear=True).create(environment)
+          python = environment / 'Scripts' / 'python.exe'
+          assert python.is_file()
+          with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as output:
+              output.write(f'VANTAGE_BUILD_PYTHON={python}\nVIRTUAL_ENV={environment}\n')
+          with open(os.environ['GITHUB_PATH'], 'a', encoding='utf-8') as output:
+              output.write(str(python.parent) + '\n')
       - name: Install exact Windows wheel dependencies
         shell: python
         run: |
-          import struct, subprocess, sys
+          import importlib.metadata, os, pathlib, site, struct, subprocess, sys
+          expected = pathlib.Path(os.environ['VANTAGE_BUILD_PYTHON']).resolve()
+          assert pathlib.Path(sys.executable).resolve() == expected, (sys.executable, expected)
+          assert sys.prefix != sys.base_prefix and not site.ENABLE_USER_SITE
+          config = (pathlib.Path(sys.prefix) / 'pyvenv.cfg').read_text().lower()
+          assert 'include-system-site-packages = false' in config
+          try:
+              importlib.metadata.distribution('pipx')
+          except importlib.metadata.PackageNotFoundError:
+              pass
+          else:
+              raise RuntimeError('Runner pipx leaked into the isolated build environment')
           subprocess.run([sys.executable, '-m', 'pip', 'install', '--only-binary=:all:', '-r', 'packaging/requirements-windows.txt'], check=True)
           subprocess.run([sys.executable, '-m', 'pip', 'check'], check=True)
           subprocess.run([sys.executable, '-m', 'pip', 'freeze'], check=True)
@@ -43,14 +67,17 @@ jobs:
         shell: python
         run: |
           import os, pathlib, subprocess, sys
+          assert pathlib.Path(sys.executable).resolve() == pathlib.Path(os.environ['VANTAGE_BUILD_PYTHON']).resolve()
           folder = pathlib.Path('runtime/tmp').resolve()
           folder.mkdir(parents=True, exist_ok=True)
           env = dict(os.environ, TMPDIR=str(folder), QT_QPA_PLATFORM='offscreen')
           subprocess.run([sys.executable, 'packaging/run_regressions.py'], env=env, check=True)
       - name: Freeze Windows x64 executable and Qt runtime
-        run: python -m PyInstaller --clean --noconfirm packaging/VANTAGE.spec
+        shell: pwsh
+        run: '& $env:VANTAGE_BUILD_PYTHON -m PyInstaller --clean --noconfirm packaging/VANTAGE.spec'
       - name: Audit, ZIP, extract and test the actual packaged executable
-        run: python packaging/verify_windows.py
+        shell: pwsh
+        run: '& $env:VANTAGE_BUILD_PYTHON packaging/verify_windows.py'
       - name: Upload verified Windows download
         uses: actions/upload-artifact@v4
         with:
