@@ -1,0 +1,133 @@
+name: Publish verified Windows release
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful Windows x64 release workflow run ID
+        required: true
+        type: string
+        default: '40390722454'
+      release_tag:
+        description: New release tag
+        required: true
+        type: string
+        default: 'v1.0.0'
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: publish-windows-${{ inputs.release_tag }}
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SOURCE_RUN_ID: ${{ inputs.run_id }}
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Verify successful source run and release target
+        id: source
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const {owner, repo} = context.repo;
+            const raw = process.env.SOURCE_RUN_ID;
+            const tag = process.env.RELEASE_TAG;
+            if (!/^[1-9][0-9]*$/.test(raw) || !Number.isSafeInteger(Number(raw))) {
+              throw new Error('run_id must be a positive, safe integer');
+            }
+            if (!/^v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/.test(tag)) {
+              throw new Error('release_tag must be a version tag such as v1.0.0');
+            }
+            const {data: repository} = await github.rest.repos.get({owner, repo});
+            if (repository.private) {
+              throw new Error('A publicly accessible release requires a public repository; this workflow does not change repository visibility');
+            }
+            const {data: run} = await github.rest.actions.getWorkflowRun({owner, repo, run_id: Number(raw)});
+            const {data: workflow} = await github.rest.actions.getWorkflow({owner, repo, workflow_id: 'release.yml'});
+            if (run.status !== 'completed' || run.conclusion !== 'success') {
+              throw new Error(`Source run is not completed successfully: ${run.status}/${run.conclusion}`);
+            }
+            if (run.workflow_id !== workflow.id || run.head_repository?.full_name !== context.payload.repository.full_name) {
+              throw new Error('Source run must belong to this repository and its Windows release workflow');
+            }
+            if (!['push', 'workflow_dispatch'].includes(run.event) || !/^[a-f0-9]{40}$/.test(run.head_sha)) {
+              throw new Error('Unsupported source event or commit SHA');
+            }
+            const artifacts = await github.paginate(github.rest.actions.listWorkflowRunArtifacts,
+              {owner, repo, run_id: Number(raw), per_page: 100});
+            const matches = artifacts.filter(a => a.name === 'VANTAGE-Windows-x64' && !a.expired);
+            if (matches.length !== 1) throw new Error('Expected exactly one unexpired VANTAGE-Windows-x64 artifact');
+            try {
+              await github.rest.repos.getReleaseByTag({owner, repo, tag});
+              throw new Error('Release already exists; use a new tag or remove the incomplete draft before retrying');
+            } catch (error) { if (error.status !== 404) throw error; }
+            try {
+              const {data: ref} = await github.rest.git.getRef({owner, repo, ref: `tags/${tag}`});
+              let object = ref.object;
+              for (let i = 0; object.type === 'tag' && i < 8; i++) {
+                const {data: annotated} = await github.rest.git.getTag({owner, repo, tag_sha: object.sha});
+                object = annotated.object;
+              }
+              if (object.type !== 'commit' || object.sha !== run.head_sha) {
+                throw new Error('Existing release tag does not point to the verified source commit');
+              }
+            } catch (error) { if (error.status !== 404) throw error; }
+            core.setOutput('sha', run.head_sha);
+            core.info(`Verified source run ${raw}, commit ${run.head_sha}, artifact ${matches[0].id}`);
+      - name: Download verified artifact on the GitHub runner
+        uses: actions/download-artifact@v4
+        with:
+          name: VANTAGE-Windows-x64
+          path: verified-windows
+          run-id: ${{ inputs.run_id }}
+          repository: ${{ github.repository }}
+          github-token: ${{ github.token }}
+      - name: Verify release files, checksums and packaged validation
+        shell: python
+        run: |
+          import hashlib, json, pathlib, re
+          root = pathlib.Path('verified-windows')
+          expected = {'VANTAGE-Windows-x64.zip', 'SHA256SUMS.txt', 'WINDOWS-VALIDATION.json'}
+          if {p.name for p in root.iterdir()} != expected:
+              raise RuntimeError('Artifact must contain exactly the three expected release files')
+          for name in expected:
+              path = root / name
+              if path.is_symlink() or not path.is_file() or path.stat().st_size == 0:
+                  raise RuntimeError(f'Missing, empty or invalid release file: {name}')
+          checksum = (root / 'SHA256SUMS.txt').read_text(encoding='utf-8').strip()
+          match = re.fullmatch(r'([a-fA-F0-9]{64})  VANTAGE-Windows-x64\.zip', checksum)
+          if not match:
+              raise RuntimeError('Unexpected checksum file format or filename')
+          archive = root / 'VANTAGE-Windows-x64.zip'
+          with archive.open('rb') as stream:
+              digest = hashlib.file_digest(stream, 'sha256').hexdigest()
+          if digest != match[1].lower():
+              raise RuntimeError('Release ZIP checksum mismatch')
+          validation = json.loads((root / 'WINDOWS-VALIDATION.json').read_text(encoding='utf-8'))
+          if not (validation.get('built') is True and validation.get('tested_on') == 'win32' and validation.get('architecture') == 'x64'):
+              raise RuntimeError('Artifact is not a validated Windows x64 build')
+          if validation.get('sha256') != digest or validation.get('compressed_bytes') != archive.stat().st_size:
+              raise RuntimeError('Validation report does not match the release ZIP')
+          tests = validation.get('tests', {})
+          for name in ('engine', 'native-gui', 'webengine-gui'):
+              if tests.get(name, {}).get('passed') is not True:
+                  raise RuntimeError(f'Packaged validation did not pass: {name}')
+          print(f'Validated release ZIP: {digest}')
+      - name: Upload all assets as a draft, then publish
+        env:
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          notes="Verified Windows x64 build from Actions run ${SOURCE_RUN_ID}, source commit ${SOURCE_SHA}. Extract the ZIP and launch VANTAGE/VANTAGE.exe."
+          gh release create "$RELEASE_TAG" \
+            verified-windows/VANTAGE-Windows-x64.zip \
+            verified-windows/SHA256SUMS.txt \
+            verified-windows/WINDOWS-VALIDATION.json \
+            --target "$SOURCE_SHA" --title "VANTAGE $RELEASE_TAG" \
+            --notes "$notes" --draft
+          gh release edit "$RELEASE_TAG" --draft=false --latest
